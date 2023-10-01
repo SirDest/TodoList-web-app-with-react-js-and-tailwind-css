@@ -36,7 +36,9 @@ const MainTodo = () => {
   const editItem = (value, id) => {
     setTodos(
       todos.map((todo) =>
-        todo.id === id ? { ...todo, todoTask: value, editingItem: false } : todo
+        todo.id === id
+          ? { ...todo, todoTask: value, editingItem: false, completed: false }
+          : todo
       )
     );
   };
