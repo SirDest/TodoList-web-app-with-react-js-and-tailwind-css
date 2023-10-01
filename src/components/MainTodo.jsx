@@ -42,7 +42,7 @@ const MainTodo = () => {
   };
   return (
     <div className="bg-[#e2d5de] w-full h-screen flex items-center ">
-      <div className="w-[300px] min-h-[500px] bg-white m-auto p-8">
+      <div className="w-fit min-h-[500px] bg-white m-auto p-8">
         <p className="text-center text-3xl font-semibold">Todo List</p>
         <AddTodo addTodos={addTodos} />
 
