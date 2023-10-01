@@ -19,8 +19,8 @@ const ListItems = ({
         <div className="text-gray-700 pl-3 py-3 outline-none first-letter:uppercase lowercase">
           <p
             style={{
-              textDecoration: completed ? "black line-through" : "none",
-              color: completed ? "red" : "blue",
+              textDecoration: completed ? "line-through" : "none",
+              color: completed ? "red" : "grey",
             }}
           >
             {todoTask}

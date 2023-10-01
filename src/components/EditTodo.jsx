@@ -25,7 +25,7 @@ const EditTodo = ({ editItem, items }) => {
       <input
         type="text"
         placeholder="Update Task"
-        className=" bg-gray-300 pl-3 py-3 outline-none"
+        className="text-black bg-gray-300 pl-3 py-3 outline-none"
         onChange={inputChange}
         value={value}
       />
