@@ -16,7 +16,7 @@ const ListItems = ({
         onClick={() => toggleCompletion(id)}
       >
         <input type="checkbox" checked={completed ? true : false} />
-        <div className="text-gray-700 pl-3 py-3 outline-none">
+        <div className="text-gray-700 pl-3 py-3 outline-none first-letter:uppercase lowercase">
           <p
             style={{
               textDecoration: completed ? "black line-through" : "none",
