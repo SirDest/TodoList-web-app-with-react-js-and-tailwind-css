@@ -1,8 +1,13 @@
 import React from "react";
 import { AiOutlineDelete, AiOutlineEdit } from "react-icons/ai";
 
-const ListItems = ({ items, toggleCompletion, deleteTodoItem }) => {
-  const { id, todoTask, completed, editingItem } = items;
+const ListItems = ({
+  items,
+  toggleCompletion,
+  deleteTodoItem,
+  editTodoItem,
+}) => {
+  const { id, todoTask, completed } = items;
 
   return (
     <div className="mt-1 h-fit flex justify-between border-b-2 border-solid	border-gray-300">
@@ -10,19 +15,30 @@ const ListItems = ({ items, toggleCompletion, deleteTodoItem }) => {
         className="flex items-center cursor-pointer"
         onClick={() => toggleCompletion(id)}
       >
-        <input type="checkbox" checked={completed && true} />
+        <input type="checkbox" checked={completed ? true : false} />
         <div className="text-gray-700 pl-3 py-3 outline-none">
-          <p style={{ textDecoration: completed ? "line-through" : "none" }}>
+          <p
+            style={{
+              textDecoration: completed ? "red line-through" : "none",
+              color: completed ? "black" : "green",
+            }}
+          >
             {todoTask}
           </p>
         </div>
       </div>
       <div className="flex gap-2">
-        <button type="submit" className="bg-none group">
+        <button
+          type="button"
+          onClick={() => {
+            editTodoItem(id);
+          }}
+          className="bg-none group"
+        >
           <AiOutlineEdit className="group-hover:scale-150 ease-in-out duration-300" />
         </button>
         <button
-          type="submit"
+          type="button"
           onClick={() => {
             deleteTodoItem(id);
           }}
