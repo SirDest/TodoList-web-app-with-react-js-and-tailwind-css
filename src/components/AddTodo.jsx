@@ -16,7 +16,7 @@ const AddTodo = ({ addTodos }) => {
   return (
     //   This form is to add new list items to the list of items in the todo
     <form
-      className="mt-2 h-fit w-fit flex justify-between bg-[#e2d5de]"
+      className="mt-2 m-auto h-fit w-fit flex justify-between bg-[#e2d5de]"
       onSubmit={submitForm}
     >
       <input
