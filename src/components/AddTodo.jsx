@@ -22,7 +22,7 @@ const AddTodo = ({ addTodos }) => {
       <input
         type="text"
         placeholder="Add Something"
-        className=" bg-[#e2d5de] text-gray-700 pl-3 py-3 outline-none"
+        className=" bg-[#e2d5de] text-gray-700 px-3 py-3 outline-none"
         onChange={inputChange}
         value={value}
       />
