@@ -9,8 +9,10 @@ const AddTodo = ({ addTodos }) => {
   };
   const submitForm = (e) => {
     e.preventDefault();
-    addTodos(value);
-    setValue("");
+    if (value.trim() !== "") {
+      addTodos(value);
+      setValue("");
+    } else return;
   };
 
   return (
@@ -22,7 +24,7 @@ const AddTodo = ({ addTodos }) => {
       <input
         type="text"
         placeholder="Add Something"
-        className=" bg-[#e2d5de] text-gray-700 px-3 py-3 outline-none"
+        className=" bg-[#e2d5de] px-3 py-3 outline-none"
         onChange={inputChange}
         value={value}
       />

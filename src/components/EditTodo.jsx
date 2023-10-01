@@ -12,18 +12,20 @@ const EditTodo = ({ editItem, items }) => {
 
   const submitForm = (e) => {
     e.preventDefault();
-    editItem(value, id);
-    setValue("");
+    if (value.trim() !== "") {
+      editItem(value, id);
+      setValue("");
+    } else return;
   };
   return (
     <form
-      className="mt-2 h-fit flex justify-between bg-[#e2d5de]"
+      className="mt-2 h-fit flex justify-between bg-gray-300"
       onSubmit={submitForm}
     >
       <input
         type="text"
         placeholder="Update Task"
-        className=" bg-[#e2d5de] text-gray-700 pl-3 py-3 outline-none"
+        className=" bg-gray-300 pl-3 py-3 outline-none"
         onChange={inputChange}
         value={value}
       />

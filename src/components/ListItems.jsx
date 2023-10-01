@@ -19,7 +19,7 @@ const ListItems = ({
         <div className="text-gray-700 pl-3 py-3 outline-none">
           <p
             style={{
-              textDecoration: completed ? "line-through" : "none",
+              textDecoration: completed ? "black line-through" : "none",
               color: completed ? "red" : "green",
             }}
           >
