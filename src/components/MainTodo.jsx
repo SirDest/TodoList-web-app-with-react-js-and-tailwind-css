@@ -1,12 +1,13 @@
-import React, { useState } from "react";
 import AddTodo from "./AddTodo";
 import ListItems from "./ListItems";
 import { v4 as uuidv4 } from "uuid";
 import EditTodo from "./EditTodo";
+import { useLocalStorage } from "usehooks-ts";
 uuidv4();
 
 const MainTodo = () => {
-  const [todos, setTodos] = useState([]);
+  const [todos, setTodos] = useLocalStorage("todo Items", []);
+
   const addTodos = (todo) => {
     setTodos([
       ...todos,
