@@ -20,7 +20,7 @@ const ListItems = ({
           <p
             style={{
               textDecoration: completed ? "black line-through" : "none",
-              color: completed ? "red" : "green",
+              color: completed ? "red" : "blue",
             }}
           >
             {todoTask}
@@ -35,7 +35,7 @@ const ListItems = ({
           }}
           className="bg-none group"
         >
-          <AiOutlineEdit className="group-hover:scale-150 ease-in-out duration-300" />
+          <AiOutlineEdit className="text-green-700 group-hover:scale-150 ease-in-out duration-300" />
         </button>
         <button
           type="button"
@@ -44,7 +44,7 @@ const ListItems = ({
           }}
           className="bg-none group"
         >
-          <AiOutlineDelete className="group-hover:scale-150 ease-in-out duration-300" />
+          <AiOutlineDelete className="text-red-700 group-hover:scale-150 ease-in-out duration-300" />
         </button>
       </div>
     </div>
