@@ -1,7 +1,7 @@
-# TodoList Web App with ReactJS and TailwindCSS 
+## TodoList Web App with ReactJS and TailwindCSS 
 This todo list web app is just a simple and efficient way to manage your tasks and stay organized. It was designed with simplicity and productivity in mind.
 
-## Demo Link👇
+### Demo Link👇
 You can view this repo here: https://destined-todolist.netlify.app/
 
 ### Key Features:
